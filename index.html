@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Discover Africa's landscapes, wildlife, cultures and memorable travel experiences.">
+  <title>Explore Africa | Discover the Continent</title>
+  
+  
+
+<style>
+
+/* Simple internal CSS for Explore Africa Tourism */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333333;
+  background: #ffffff;
+}
+
+a {
+  color: #184d27;
+}
+
+.site-header {
+  background: #184d27;
+  color: #ffffff;
+}
+
+.topbar {
+  max-width: 1100px;
+  margin: auto;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.brand {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 21px;
+  font-weight: bold;
+}
+
+.brand span {
+  color: #e5b642;
+}
+
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.site-nav a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 5px 3px;
+  font-size: 14px;
+}
+
+.site-nav a:hover,
+.site-nav a[aria-current="page"] {
+  color: #e5b642;
+  text-decoration: underline;
+}
+
+.nav-check {
+  position: absolute;
+  left: -9999px;
+}
+
+.menu-label {
+  display: none;
+  padding: 6px 10px;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  background: #184d27;
+  cursor: pointer;
+}
+
+.hero {
+  background: #eaf0e8;
+  color: #183b22;
+  padding: 48px 20px;
+}
+
+.hero-inner {
+  max-width: 1100px;
+  margin: auto;
+}
+
+
+.hero h1 {
+  max-width: 750px;
+  font-size: 38px;
+  line-height: 1.2;
+  margin: 10px 0;
+}
+
+.hero p {
+  max-width: 720px;
+}
+
+.hero-actions {
+  margin-top: 18px;
+}
+
+.button {
+  display: inline-block;
+  background: #184d27;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 9px 14px;
+  border: 1px solid #184d27;
+}
+
+.button:hover {
+  background: #10371c;
+}
+
+main {
+  max-width: 1100px;
+  margin: auto;
+  padding: 30px 20px 45px;
+}
+
+.section-heading {
+  margin-bottom: 18px;
+}
+
+.section-heading h2 {
+  color: #184d27;
+  margin-bottom: 5px;
+}
+
+.section-heading p {
+  margin-top: 0;
+}
+
+h2, h3 {
+  line-height: 1.3;
+}
+
+h3 {
+  color: #184d27;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.card {
+  border: 1px solid #dddddd;
+  background: #ffffff;
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.card-body {
+  padding: 15px;
+}
+
+.card-body h3 {
+  margin-top: 0;
+}
+
+.card-body p {
+  margin-bottom: 0;
+}
+
+.content-image {
+  display: block;
+  max-width: 100%;
+  width: 700px;
+  height: auto;
+  margin: 15px 0;
+}
+
+.feature-list {
+  padding-left: 22px;
+}
+
+.feature-list li {
+  margin-bottom: 10px;
+}
+
+.content-panel {
+  border: 1px solid #dddddd;
+  padding: 18px;
+  margin: 22px 0;
+  background: #ffffff;
+}
+
+.country-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  padding-left: 22px;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+
+.contact-details p {
+  margin-bottom: 12px;
+}
+
+.contact-form label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 14px;
+  border: 1px solid #aaaaaa;
+  font: inherit;
+}
+
+.contact-form textarea {
+  min-height: 120px;
+}
+
+.notice {
+  background: #f7f1dd;
+  padding: 12px;
+  border-left: 4px solid #d6a928;
+}
+
+.small-note {
+  font-size: 14px;
+  color: #555555;
+}
+
+.site-footer {
+  background: #10371c;
+  color: #ffffff;
+  padding: 22px 20px;
+}
+
+.footer-inner {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+.site-footer strong {
+  color: #e5b642;
+}
+
+@media (max-width: 850px) {
+  .topbar {
+    align-items: center;
+  }
+
+  .menu-label {
+    display: inline-block;
+    margin-left: auto;
+  }
+
+  .site-nav {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .nav-check:checked ~ .site-nav {
+    display: flex;
+  }
+
+  .site-nav a {
+    padding: 7px 0;
+  }
+
+  .card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    padding: 35px 18px;
+  }
+
+  .hero h1 {
+    font-size: 30px;
+  }
+
+  main {
+    padding: 24px 18px 35px;
+  }
+
+  .card-grid,
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card img {
+    height: 210px;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+  }
+}
+
+</style>
+</head>
+<body>
+<header class="site-header">
+  <div class="topbar">
+    <a class="brand" href="index.html">EXPLORE <span>AFRICA</span></a>
+    <input class="nav-check" type="checkbox" id="nav-check" aria-label="Toggle navigation menu"><label class="menu-label" for="nav-check">☰ Menu</label><nav class="site-nav" id="site-navigation" aria-label="Main navigation">
+      <a href="index.html" aria-current="page">Home</a><a href="about.html">About Africa</a><a href="destina.html">Destinations</a><a href="wildlife.html">Wildlife</a><a href="culture.html">Culture</a><a href="activity.html">Activities</a><a href="accomodate.html">Accommodation</a><a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+<section class="hero">
+  <div class="hero-inner">
+    <h1>Explore Africa, one unforgettable journey at a time.</h1>
+    <p>Discover remarkable landscapes, incredible wildlife, rich cultures and welcoming destinations across our diverse continent.</p>
+    <div class="hero-actions"><a class="button button-primary" href="destina.html">Explore destinations</a></div>
+  </div>
+</section>
+<main>
+  <section class="section-heading">
+    <h2>Welcome to Explore Africa</h2>
+    <p>Africa offers something for every traveller, from wide-open savannahs and dramatic mountains to vibrant traditions and beautiful coastlines.</p>
+  </section>
+  <section class="card-grid" aria-label="Explore website sections">
+    <article class="card"><img src="ami.png" alt="African wildlife and natural scenery"><div class="card-body"><h3>Wildlife & nature</h3><p>Learn about Africa's wildlife and the habitats that need protecting.</p></div></article>
+    <article class="card"><img src="park.png" alt="African national park landscape"><div class="card-body"><h3>Tourist destinations</h3><p>Explore national parks, mountains, coastlines and famous landmarks.</p></div></article>
+    <article class="card"><img src="dance.png" alt="African traditional dance and cultural celebration"><div class="card-body"><h3>Culture & heritage</h3><p>Discover the music, food, clothing and traditions of African communities.</p></div></article>
+  </section>
+  <section class="content-panel" style="margin-top:28px">
+    <div class="section-heading"><h2>Why visit Africa?</h2><p>Experience a continent of extraordinary variety and memorable adventures.</p></div>
+    <ul class="feature-list">
+      <li><strong>Beautiful national parks</strong><br>Explore protected landscapes and scenic wilderness.</li>
+      <li><strong>Amazing wildlife</strong><br>Discover animals in their natural habitats.</li>
+      <li><strong>Rich cultures</strong><br>Learn about traditions, art, music and local food.</li>
+      <li><strong>Beaches and mountains</strong><br>Enjoy coastlines, lakes, valleys and high peaks.</li>
+    </ul>
+  </section>
+  <section class="content-panel">
+    <div class="section-heading"><h2>Featured countries</h2><p>Start planning by discovering a few of Africa's many destinations.</p></div>
+    <ul class="country-list"><li>Uganda</li><li>Kenya</li><li>Tanzania</li><li>South Africa</li></ul>
+    
+  </section>
+</main>
+<footer class="site-footer"><div class="footer-inner"><p><strong>Explore Africa Tourism</strong><br>Discover Africa. Experience Africa. Love Africa.</p><p>© 2026 Explore Africa Tourism</p></div></footer>
+</body>
+</html>

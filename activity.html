@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Activities in Africa | Explore Africa</title>
+<style>
+
+/* Simple internal CSS for Explore Africa Tourism */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333333;
+  background: #ffffff;
+}
+
+a {
+  color: #184d27;
+}
+
+.site-header {
+  background: #184d27;
+  color: #ffffff;
+}
+
+.topbar {
+  max-width: 1100px;
+  margin: auto;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.brand {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 21px;
+  font-weight: bold;
+}
+
+.brand span {
+  color: #e5b642;
+}
+
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.site-nav a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 5px 3px;
+  font-size: 14px;
+}
+
+.site-nav a:hover,
+.site-nav a[aria-current="page"] {
+  color: #e5b642;
+  text-decoration: underline;
+}
+
+.nav-check {
+  position: absolute;
+  left: -9999px;
+}
+
+.menu-label {
+  display: none;
+  padding: 6px 10px;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  background: #184d27;
+  cursor: pointer;
+}
+
+.hero {
+  background: #eaf0e8;
+  color: #183b22;
+  padding: 48px 20px;
+}
+
+.hero-inner {
+  max-width: 1100px;
+  margin: auto;
+}
+
+.eyebrow {
+  color: #805f0b;
+  font-size: 13px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.hero h1 {
+  max-width: 750px;
+  font-size: 38px;
+  line-height: 1.2;
+  margin: 10px 0;
+}
+
+.hero p {
+  max-width: 720px;
+}
+
+.hero-actions {
+  margin-top: 18px;
+}
+
+.button {
+  display: inline-block;
+  background: #184d27;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 9px 14px;
+  border: 1px solid #184d27;
+}
+
+.button:hover {
+  background: #10371c;
+}
+
+main {
+  max-width: 1100px;
+  margin: auto;
+  padding: 30px 20px 45px;
+}
+
+.section-heading {
+  margin-bottom: 18px;
+}
+
+.section-heading h2 {
+  color: #184d27;
+  margin-bottom: 5px;
+}
+
+.section-heading p {
+  margin-top: 0;
+}
+
+h2, h3 {
+  line-height: 1.3;
+}
+
+h3 {
+  color: #184d27;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.card {
+  border: 1px solid #dddddd;
+  background: #ffffff;
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.card-body {
+  padding: 15px;
+}
+
+.card-body h3 {
+  margin-top: 0;
+}
+
+.card-body p {
+  margin-bottom: 0;
+}
+
+.content-image {
+  display: block;
+  max-width: 100%;
+  width: 700px;
+  height: auto;
+  margin: 15px 0;
+}
+
+.feature-list {
+  padding-left: 22px;
+}
+
+.feature-list li {
+  margin-bottom: 10px;
+}
+
+.content-panel {
+  border: 1px solid #dddddd;
+  padding: 18px;
+  margin: 22px 0;
+  background: #ffffff;
+}
+
+.country-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  padding-left: 22px;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+
+.contact-details p {
+  margin-bottom: 12px;
+}
+
+.contact-form label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 14px;
+  border: 1px solid #aaaaaa;
+  font: inherit;
+}
+
+.contact-form textarea {
+  min-height: 120px;
+}
+
+.notice {
+  background: #f7f1dd;
+  padding: 12px;
+  border-left: 4px solid #d6a928;
+}
+
+.small-note {
+  font-size: 14px;
+  color: #555555;
+}
+
+.site-footer {
+  background: #10371c;
+  color: #ffffff;
+  padding: 22px 20px;
+}
+
+.footer-inner {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+.site-footer strong {
+  color: #e5b642;
+}
+
+@media (max-width: 850px) {
+  .topbar {
+    align-items: center;
+  }
+
+  .menu-label {
+    display: inline-block;
+    margin-left: auto;
+  }
+
+  .site-nav {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .nav-check:checked ~ .site-nav {
+    display: flex;
+  }
+
+  .site-nav a {
+    padding: 7px 0;
+  }
+
+  .card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    padding: 35px 18px;
+  }
+
+  .hero h1 {
+    font-size: 30px;
+  }
+
+  main {
+    padding: 24px 18px 35px;
+  }
+
+  .card-grid,
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card img {
+    height: 210px;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+  }
+}
+
+</style>
+</head>
+<body>
+<header class="site-header"><div class="topbar"><a class="brand" href="index.html">EXPLORE <span>AFRICA</span></a><input class="nav-check" type="checkbox" id="nav-check" aria-label="Toggle navigation menu"><label class="menu-label" for="nav-check">☰ Menu</label><nav class="site-nav" id="site-navigation" aria-label="Main navigation"><a href="index.html">Home</a><a href="about.html">About Africa</a><a href="destina.html">Destinations</a><a href="wildlife.html">Wildlife</a><a href="culture.html">Culture</a><a href="activity.html" aria-current="page">Activities</a><a href="accomodate.html">Accommodation</a><a href="contact.html">Contact</a></nav></div></header>
+<section class="hero"><div class="hero-inner"><div class="eyebrow">Adventure awaits</div><h1>Activities in Africa</h1><p>Find exciting experiences for different interests, from wildlife viewing to mountain adventures and relaxing coastlines.</p></div></section>
+<main>
+<section class="card-grid">
+<article class="card"><img src="ami.png" alt="Wildlife and safari scenery"><div class="card-body"><h3>Wildlife safari</h3><p>Visitors can go on wildlife safaris to see animals such as elephants, lions and giraffes in their natural habitats.</p></div></article>
+<article class="card"><img src="image 2.png" alt="Mountain landscape in East Africa"><div class="card-body"><h3>Mountain climbing</h3><p>Adventure lovers can explore mountains such as Kilimanjaro in Tanzania and the Rwenzori Mountains in Uganda.</p></div></article>
+<article class="card"><img src="beach.png" alt="African beach and coastline"><div class="card-body"><h3>Beach tourism</h3><p>Africa has beautiful beaches where visitors can relax and enjoy coastal scenery. Popular areas include Zanzibar in Tanzania and the Kenyan coast.</p></div></article>
+<article class="card"><div class="card-body"><h3>Boat trips</h3><p>Visitors can enjoy boat trips on selected lakes and rivers, including in Uganda's Murchison Falls National Park. Follow local safety instructions and wear a life jacket when required.</p></div></article>
+</section>
+</main><footer class="site-footer"><div class="footer-inner"><p><strong>Explore Africa Tourism</strong><br>Discover, experience and love Africa.</p><p>© 2026 Explore Africa Tourism</p></div></footer>
+</body></html>
